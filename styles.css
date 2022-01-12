@@ -1,0 +1,60 @@
+::Before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  margin: 0;
+  padding:0;
+}
+
+.calulator-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calulator-container > button {
+  cursor: pointer; 
+  font-size: 2em;
+  background: white;
+  outline: none;
+  background: rgba(83, 83, 83, 0.6);
+  transition: all .2s ease-in-out;
+  border: 1px solid rgb(112, 112, 112);
+  color:white;
+}
+
+.calulator-container > button:hover {
+  background: #626262;
+  transition: all .2s ease-in-out;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.calculator-screen {
+  background: rgba(90, 90, 90, 0.6);
+  grid-column: 1 /-1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 15px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.calculator-screen  .previous-input {
+  color:rgba(211, 211, 211, 0.7);
+  font-size:1.8rem;
+}
+
+.calculator-screen  .current-input {
+  color:#ffffff;
+  font-size:2.5rem;
+}
